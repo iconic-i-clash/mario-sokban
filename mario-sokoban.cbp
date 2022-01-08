@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="mario-sokoban" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/mario-sokoban" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="-lsdl2_image" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="$(#sdl2.include)" />
+		</Compiler>
+		<Linker>
+			<Add library="mingw32" />
+			<Add library="SDL2main" />
+			<Add library="SDL2.dll" />
+			<Add library="user32" />
+			<Add library="gdi32" />
+			<Add library="winmm" />
+			<Add library="dxguid" />
+			<Add directory="$(#sdl2.lib)" />
+		</Linker>
+		<ExtraCommands>
+			<Add after="XCOPY $(#sdl2)\bin\*.dll $(TARGET_OUTPUT_DIR) /D /Y" />
+		</ExtraCommands>
+		<Unit filename="caisse.jpg" />
+		<Unit filename="caisse_ok.jpg" />
+		<Unit filename="constantes.h" />
+		<Unit filename="editeur.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="editeur.h" />
+		<Unit filename="fichier.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="fichier.h" />
+		<Unit filename="initialisation.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="initialisation.h" />
+		<Unit filename="jeu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="jeu.h" />
+		<Unit filename="logo.png" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mario_bas.gif" />
+		<Unit filename="mario_droite.gif" />
+		<Unit filename="mario_gauche.gif" />
+		<Unit filename="mario_haut.gif" />
+		<Unit filename="menu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="menu.h" />
+		<Unit filename="menu.png" />
+		<Unit filename="mur.jpg" />
+		<Unit filename="objectif.png" />
+		<Unit filename="pause.png" />
+		<Unit filename="texture.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="texture.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
